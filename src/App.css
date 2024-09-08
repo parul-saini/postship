@@ -1,38 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 .App {
-  text-align: center;
+  background-color: #fefefe;
+  height: 100vh;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-link.active {
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 15%;
+  width: 50%;
+  height: 2px;
+  background-color: #360b43;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+/* Container for the search input and icon */
+.search-bar {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid #000; 
+  padding: 5px 0;
+  width: 35%; 
+}
+
+/* Styling the search input */
+.search-input {
+  border: none !important;
+  background: transparent !important;
+  outline: none !important;
+  flex: 1; 
+  padding-left: 10px; 
+  font-size: 16px; 
+}
+
+/* Search icon at the start of the input */
+.search-icon {
+  font-size: 18px; 
+  color: #000; 
+  margin-right: 10px;
+}
+
+.search-bar:focus-within {
+  background: transparent !important;
+  outline: none !important;
+}
+
+/* Adjusting the placeholder text position */
+.search-input::placeholder {
+  color: #999; 
+}
+
+.after-search{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.after-search .nav-link{
+  color: grey;
+  font-weight: 500;
+}
+
+
+
+/* -------------------- first block */
+.first-block{
+  height: 64vh;
+  width: auto;
+  background: #fffdfa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ .heading{
+  display: block;
+  width: 90vw;
+  margin-bottom: 32px;
+  color: #4A4A4A;
+}
+
+.box{
+  border: 2px solid #d8d8d8;
+  border-radius: 17px;
+  padding: 19px 15px !important;
+  width: calc(100% - 70%) !important;
+  margin-right:10px ;
+}
+
+.box1{
+  background: #ffffff;
+}
+
+.box2{
+  background: #fff8db;
+}
+
+.box3{
+  background: #eaf4ff;
+}
+
+.box .inner-box{
+  font-size: 19px;
+}
+.home-btn{
+  padding: 6px 15px;
+  border: 2px solid grey;  
+  outline: 2px solid black; 
+  border-radius: 10px;
   color: white;
+  background: #3e3e3e;
+}
+.home-diff-btn{
+  padding: 6px 15px;
+  border: 2px solid #80808094; 
+  border-radius: 10px;
+  color: rgb(10, 9, 9);
+  background: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+/* -------------------------third block  */
+.block{
+  border: 2px solid #d8d8d8;
+  border-radius: 15px;
+  padding: 20px 17px !important;
+  background: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.color-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.color-input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 75%;
+}
+
+.color-picker {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 35px;
+  width: 78px;
+  background-color: transparent;
+}
+
+.side-block{
+  width: calc(100% - 73%) !important;
+}
+.third-block{
+  background: #fffdfa;
+    padding-top: 30px;
+    padding-bottom: 45px;
+}
+
+textarea{
+  width: 98%;
+  border: 2px solid grey;
+  border-radius: 12px;
+  background: white;
+  padding: 10px;
+}
+
+.images-icon img{
+  width: 16%;
+  height: 68%;
+}
+
+
+
+/* ---------------------------------- graph container */
+.app-container {
+  padding: 20px;
+  background-color: #fdf1e3;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.time-filters {
+  display: flex;
+  margin: 10px 0;
+}
+
+.time-filters .btn {
+  color: #4A4A4A;
+}
+
+.btn {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff !important;
+  cursor: pointer;
+  font-weight: bold !important;
+}
+
+.btn.selected {
+  border: 2px solid #5a4b81;
+  background-color: #dbd4eda6 !important;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.middle-block-graph, .right-block {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  margin-right: 20px;
+}
+
+.left-block {
+  width: 35% !important; 
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  margin-right: 20px;
+}
+
+.middle-block-graph{
+  background-color: #956f00;
+  color: white;
+  width: 20%;
+}
+
+.middle-block-graph p{
+ font-size: 20px;
+}
+
+.right-block {
+  flex: 1;
+}
+
+.shipment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #4A4A4A;
+  font-size: 19px;
+}
+
+.status-filters {
+  display: flex;
+  overflow-x: auto; 
+  white-space: wrap; 
+  padding: 10px 0;
+  scrollbar-width: none; 
+}
+
+.status-filters::-webkit-scrollbar {
+  display: none; 
+}
+
+.status-filters  .show{
+  background: #fdf1e3 !important;
+  border: 1px solid #80808054;
+}
+
+.status-filters button {
+  margin-right: 10px;
+  padding: 10px;
+  background-color: #eee;
+  border: none;
+  border-radius: 10px;
+  flex-shrink: 0; 
+  cursor: pointer;
+}
+
+.status-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.color-box-status {
+  width: 27px;
+  height: 13px;
+  margin-right: 10px;
+  border-radius: 12px;
+}
+
+.exception{
+background-color: #5e4200;
+}
+
+.intransit{
+  background: #956f00;
+}
+
+.pending{
+  background: #e5a500;
+}
+
+.delivered{
+  background: #ffc879;
+}
+
+.out-for-delivery{
+  background: #ffddb6;
+}
+
+.graph-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.orders, .views {
+  background-color: #fce4d6;
+  padding: 35px 28px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.orders {
+  background-color: #ffebd5;
+}
+.views {
+  background-color: #ffc879;
+}
+
+.orders h1, .views h1{
+  font-size: 40px;
+}
+
+.icon {
+  font-size: 40px;
+}
+
+.check-orders-btn {
+  padding: 10px 20px;
+  background-color: #fff;
+  color:black;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
 }
