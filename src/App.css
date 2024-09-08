@@ -12,6 +12,9 @@ body{
   width: 100%;
 }
 
+.nav-link {
+font-weight: bold !important;
+}
 .nav-link.active {
   position: relative;
 }
@@ -252,7 +255,7 @@ textarea{
 }
 
 .middle-block-graph p{
- font-size: 20px;
+ font-size: 18px;
 }
 
 .right-block {
@@ -298,6 +301,8 @@ textarea{
   margin-top: 20px;
   display: flex;
   flex-direction: column;
+  position: relative;
+    top: 45px;
 }
 
 .status-item {
@@ -343,7 +348,7 @@ background-color: #5e4200;
 
 .orders, .views {
   background-color: #fce4d6;
-  padding: 35px 28px;
+  padding: 30px 28px;
   border-radius: 10px;
   display: flex;
   flex-direction: row;
@@ -372,4 +377,25 @@ background-color: #5e4200;
   cursor: pointer;
   margin-top: 20px;
   border-radius: 5px;
+}
+
+
+/* For screens with width 1366px and up */
+@media only screen and (min-width: 1366px) {
+  
+}
+
+/* For screens with width between 1280px and 1365px */
+@media only screen and (min-width: 1280px) and (max-width: 1365px) {
+ 
+}
+
+/* For screens with width between 1024px and 1279px */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  
+}
+
+/* For screens with width less than 1024px (mobile or small tablet) */
+@media only screen and (max-width: 1023px) {
+ 
 }
