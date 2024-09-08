@@ -21,14 +21,13 @@ const NavbarComp = () => {
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
             navbarScroll
           >
             <Nav.Link 
-            className={`nav-link ms-3 me-4 ${location.pathname === "/" ? "active" : ""}`} as={Link} to="/">Home
+            className={`nav-link ms-xl-3 me-xl-4 ${location.pathname === "/" ? "active" : ""}`} as={Link} to="/">Home
             </Nav.Link>
-            <Nav.Link className={`nav-link ms-3 me-4 ${location.pathname === "/orders" ? "active" : ""}`} as={Link} to="/orders">Orders</Nav.Link>
-            <Nav.Link className={`nav-link ms-3 me-4 ${location.pathname === "/integrations" ? "active" : ""}`} as={Link} to="/integrations">Integrations</Nav.Link>
+            <Nav.Link className={`nav-link  ms-xl-3 me-xl-4 ${location.pathname === "/orders" ? "active" : ""}`} as={Link} to="/orders">Orders</Nav.Link>
+            <Nav.Link className={`nav-link  ms-xl-3 me-xl-4 ${location.pathname === "/integrations" ? "active" : ""}`} as={Link} to="/integrations">Integrations</Nav.Link>
             <NavDropdown className='me-4' title="Tracking Page" id="navbarScrollingDropdown">
               <NavDropdown.Item to="#action3">Action</NavDropdown.Item>
               <NavDropdown.Item to="#action4">
@@ -39,7 +38,7 @@ const NavbarComp = () => {
                 Something else here
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link className={`nav-link ms-3 me-4 ${location.pathname === "/partners" ? "active" : ""}`} as={Link} to="/partners" >
+            <Nav.Link className={`nav-link  ms-xl-3 me-xl-4 ${location.pathname === "/partners" ? "active" : ""}`} as={Link} to="/partners" >
               Partner with Us
             </Nav.Link>
           </Nav>

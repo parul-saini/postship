@@ -22,7 +22,7 @@ const Home = () => {
     <>  
       {/* first block  */}
       <div className='container-fluid first-block mt-5'>
-        <div className='row ms-5 me-3 d-flex'> 
+        <div className='row ms-5 me-3 mt-lg-5 mb-lg-5 d-flex'> 
           <div className="heading">
             <h1 className='fw-bold'>Welcome, John Methew!!</h1>
           </div>
@@ -116,22 +116,24 @@ const Home = () => {
           {/* Middle Block */}
           <div className="middle-block-graph pe-5">
             <p className='mb-3 fw-bold'>Star Facts about your orders!!!</p>
-            <div className='mb-3'>
-              <p>
-                There are 8 shipments that have been in out for delivery for more than 3 days.
-              </p>
+            <div className="d-flex flex-column justify-content-between">
+              <div className='mb-3'>
+                <p>
+                  There are 8 shipments that have been in out for delivery for more than 3 days.
+                </p>
+              </div>
+              <div>
+                <p>
+                  There are 5 shipments in exception right now.
+                </p> 
+              </div>
+              <div>
+                <p>
+                  The maximum chargebacks are from Miami.
+                </p>
+              </div>
+              <button className="check-orders-btn">Check Orders Page</button>
             </div>
-            <div>
-              <p>
-                There are 5 shipments in exception right now.
-              </p> 
-            </div>
-            <div>
-              <p>
-                The maximum chargebacks are from Miami.
-              </p>
-            </div>
-            <button className="check-orders-btn">Check Orders Page</button>
           </div>
 
           {/* Right Block */}
@@ -176,64 +178,66 @@ const Home = () => {
               <p style={{"font-size": "18px"}}>
                 Immerse your customers in a branded experience by personalizing colors on your tracking page.
               </p>
-              <div className="color-picker1 mt-4">
-                <p className='m-0'>Accent Color</p>
-                <div className="color-box">
-                  <input
-                    type="text"
-                    value={color.replace("#", "")}
-                    onChange={(e) => setColor(`#${e.target.value}`)}
-                    className="color-input"
-                    placeholder="Pick a color"
-                  />
-                  <input
-                    type="color"
-                    value={color}
-                    onChange={handleColorChange}
-                    className="color-picker"
-                  />
+              <div className="d-flex justify-content-between flex-column">
+                <div className="color-picker1 mt-4">
+                  <p className='m-0'>Accent Color</p>
+                  <div className="color-box">
+                    <input
+                      type="text"
+                      value={color.replace("#", "")}
+                      onChange={(e) => setColor(`#${e.target.value}`)}
+                      className="color-input"
+                      placeholder="Pick a color"
+                    />
+                    <input
+                      type="color"
+                      value={color}
+                      onChange={handleColorChange}
+                      className="color-picker"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="color-picker2 mt-4">
-                <p className='m-0'> Text Color</p>
-                <div className="color-box">
-                  <input
-                    type="text"
-                    value={textColor.replace("#", "")}
-                    onChange={(e) => setTextColor(`#${e.target.value}`)}
-                    className="color-input"
-                    placeholder="Pick a color"
-                  />
-                  <input
-                    type="color"
-                    value={textColor}
-                    onChange={handleTextColorChange}
-                    className="color-picker"
-                  />
+                <div className="color-picker2 mt-4">
+                  <p className='m-0'> Text Color</p>
+                  <div className="color-box">
+                    <input
+                      type="text"
+                      value={textColor.replace("#", "")}
+                      onChange={(e) => setTextColor(`#${e.target.value}`)}
+                      className="color-input"
+                      placeholder="Pick a color"
+                    />
+                    <input
+                      type="color"
+                      value={textColor}
+                      onChange={handleTextColorChange}
+                      className="color-picker"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="color-picker3 mt-4">
-                <p className='m-0'> Background Color</p>
-                <div className="color-box">
-                  <input
-                    type="text"
-                    value={backgroundColor.replace("#", "")}
-                    onChange={(e) =>setBackgroundColor(`#${e.target.value}`)}
-                    className="color-input"
-                    placeholder="Pick a color"
-                  />
-                  <input
-                    type="color"
-                    value={backgroundColor}
-                    onChange={handleBackgorundColorChange}
-                    className="color-picker"
-                  />
+                <div className="color-picker3 mt-4">
+                  <p className='m-0'> Background Color</p>
+                  <div className="color-box">
+                    <input
+                      type="text"
+                      value={backgroundColor.replace("#", "")}
+                      onChange={(e) =>setBackgroundColor(`#${e.target.value}`)}
+                      className="color-input"
+                      placeholder="Pick a color"
+                    />
+                    <input
+                      type="color"
+                      value={backgroundColor}
+                      onChange={handleBackgorundColorChange}
+                      className="color-picker"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className=" mt-3">
-                <button className='home-diff-btn me-2'>Preview</button>
-                <button className='home-btn'>Apply Colors</button>
-              </div>
+                <div className="mt-3">
+                  <button className='home-diff-btn me-2'>Preview</button>
+                  <button className='home-btn'>Apply Colors</button>
+                </div>
+              </div>  
             </div> 
 
             <div className="col-5  ms-3 me-3 middle-block ">
@@ -271,7 +275,7 @@ const Home = () => {
               </p>
               <div className="textarea">
                 <p className='m-0'>HTML Link</p> 
-                <textarea name="" id="" rows={8}>Value</textarea>
+                <textarea name="" id="" rows={6}>Value</textarea>
               </div>
               <div className=" mt-3">
                 <button className='home-diff-btn me-2'>Preview</button>

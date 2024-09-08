@@ -12,6 +12,10 @@ body{
   width: 100%;
 }
 
+.navbar-nav .navbar-nav-scroll{
+  max-width: 100px !important;
+}
+
 .nav-link {
 font-weight: bold !important;
 }
@@ -103,6 +107,9 @@ font-weight: bold !important;
   padding: 19px 15px !important;
   width: calc(100% - 70%) !important;
   margin-right:10px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .box1{
@@ -142,7 +149,7 @@ font-weight: bold !important;
 .block{
   border: 2px solid #d8d8d8;
   border-radius: 15px;
-  padding: 20px 17px !important;
+  padding: 17px !important;
   background: white;
 }
 
@@ -302,7 +309,7 @@ textarea{
   display: flex;
   flex-direction: column;
   position: relative;
-    top: 45px;
+  top: 35px;
 }
 
 .status-item {
@@ -370,7 +377,7 @@ background-color: #5e4200;
 }
 
 .check-orders-btn {
-  padding: 10px 20px;
+  padding: 10px 15px;
   background-color: #fff;
   color:black;
   border: none;
@@ -380,19 +387,52 @@ background-color: #5e4200;
 }
 
 
-/* For screens with width 1366px and up */
 @media only screen and (min-width: 1366px) {
   
 }
-
 /* For screens with width between 1280px and 1365px */
 @media only screen and (min-width: 1280px) and (max-width: 1365px) {
- 
+  .box .inner-box {
+    font-size: 17px;
+  }
+  .check-orders-btn {
+    padding: 10px 14px;
+  }
 }
 
 /* For screens with width between 1024px and 1279px */
-@media only screen and (min-width: 1024px) and (max-width: 1279px) {
-  
+@media only screen and (min-width: 1024px) and (max-width: 1250px) {
+  .navbar-collapse .navbar-nav{
+    max-height: 50px !important;
+  }
+  .nav-link{
+    margin: 0px !important;
+  }
+  .check-orders-btn {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+  .home-btn {
+    padding: 5px 7px;
+    font-size: 13px;
+  }
+  .home-diff-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+  .shipment-header {
+    font-size: 12px;
+  }
+  .status-filters button {
+    margin-right: 6px;
+    padding: 6px;
+  }
+  .middle-block-graph p {
+    font-size: 14px;
+  }
+  .orders, .views {
+    padding: 16px 25px;
+  }
 }
 
 /* For screens with width less than 1024px (mobile or small tablet) */
