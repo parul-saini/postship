@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <>  
       {/* first block  */}
-      <div className='container-fluid first-block'>
+      <div className='container-fluid first-block mt-5'>
         <div className='row ms-5 me-3 d-flex'> 
           <div className="heading">
             <h1 className='fw-bold'>Welcome, John Methew!!</h1>
